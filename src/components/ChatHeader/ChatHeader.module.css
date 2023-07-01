@@ -1,0 +1,63 @@
+.chatHeader {
+    color: #fff;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btnSwitchTheme {
+    display: inline-block;
+    height: 34px;
+    margin: 20px auto 0;
+    position: relative;
+    width: 60px;
+  }
+
+  .btnSwitchTheme input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+
+  .slider {
+    -webkit-transition: 0.5s;
+    background-color: rgb(247, 241, 241);
+    border-radius: 34px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+  }
+
+  .slider:before {
+    -webkit-transition: 0.5s;
+    background-color: rgb(200, 199, 206);
+    border-radius: 50%;
+    bottom: 4px;
+    content: '';
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.5s;
+    width: 26px;
+  }
+
+  input:checked + .slider {
+    background-color: #393e46;
+    ;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #fff;
+  }
+  
+  input:checked + .slider:before {
+    -ms-transform: translateX(25px);
+    -webkit-transform: translateX(25px);
+    transform: translateX(25px);
+  }

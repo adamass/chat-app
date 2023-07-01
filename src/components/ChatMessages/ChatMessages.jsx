@@ -1,30 +1,28 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import styles from "./ChatMessages.module.css"
 
 const ChatMessages = ({ messages, currentMember, deleteMessage }) => {
   const renderMessage = (message) => {
     const { id, member, text } = message
     const messageFromMe = member && member.id === currentMember.id
-    const className = messageFromMe
-      ? 'chat-message current-user'
-      : 'chat-message'
 
     const onDeleteClick = () => {
       deleteMessage(id)
     }
 
     return (
-      <li key={id} className={className}>
+      <li key={id} className={messageFromMe ? [styles.chatMessage, styles.currentUser].join(' ') : styles.chatMessage}>
         <span
-          className='profile-color'
+          className={styles['profileColor']}
           style={{ backgroundColor: member.clientData.color }}
         />
-        <div className='chat-content'>
-          <div className='username'>{member.clientData.username}</div>
-          <div className='text-message'>{text}</div>
+        <div className={styles['chatContent']}>
+          <div className={styles['username']}>{member.clientData.username}</div>
+          <div className={styles['textMessage']}>{text}</div>
           {messageFromMe && (
-            <div className='delete-icon' onClick={onDeleteClick}>
+            <div className={styles['deleteIcon']} onClick={onDeleteClick}>
               <FontAwesomeIcon icon={faTrash} />
             </div>
           )}
@@ -33,7 +31,7 @@ const ChatMessages = ({ messages, currentMember, deleteMessage }) => {
     )
   }
 
-  return <ul className='chat-list'>{messages.map((m) => renderMessage(m))}</ul>
+  return <ul className={styles['chatList']}>{messages.map((m) => renderMessage(m))}</ul>
 }
 
 export default ChatMessages

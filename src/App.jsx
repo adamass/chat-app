@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
-import ChatMessages from './components/ChatMessages'
-import ChatInput from './components/ChatInput'
-import ChatHeader from './components/ChatHeader'
+import ChatMessages from './components/ChatMessages/ChatMessages'
+import ChatInput from './components/ChatInput/ChatInput'
+import ChatHeader from './components/ChatHeader/ChatHeader'
 import { randomName } from './utils/randomName'
 import { randomColor } from './utils/randomColor'
-import messageDeleteSound from './sound/message-delete.mp3'
+import messageDeleteSound from './sounds/message-delete.wav'
 import './App.css'
+
+
 
 const App = () => {
   const [messages, setMessages] = useState([])
@@ -13,7 +15,7 @@ const App = () => {
     username: randomName(),
     color: randomColor(),
   })
-  const [darkMode, setDarkMode] = useState(false)
+  const [background, setBackground] = useState(false)
 
   const droneRef = useRef(
     new window.Scaledrone(process.env.REACT_APP_SCALEDRONE_CHANNEL_ID || "yyKhKOnYWDhPvZfM", {
@@ -40,8 +42,8 @@ const App = () => {
     })
   }, [])
 
-  const toggleDarkMode = () => {
-    setDarkMode((prevDarkMode) => !prevDarkMode)
+  const toggleBackground = () => {
+    setBackground((prevBackground) => !prevBackground)
   }
 
   const sendMessage = (message) => {
@@ -59,8 +61,8 @@ const App = () => {
   }
 
   return (
-    <div className={`chat-app-sb ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <ChatHeader darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    <div className={`chatApp ${background ? 'bgPaper' : 'bgWood'}`}>
+      <ChatHeader background={background} toggleBackground={toggleBackground} />
       <ChatMessages
         messages={messages}
         currentMember={member}

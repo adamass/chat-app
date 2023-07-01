@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import messageSentSound from '../sound/message-sent.mp3'
+import messageSentSound from '../../sounds/message-sent.mp3'
+import clickButtonSound from '../../sounds/click-button.mp3'
+import styles from './ChatInput.module.css'
 
 const ChatInput = ({ sendMessage }) => {
   const [text, setText] = useState('')
@@ -12,7 +14,7 @@ const ChatInput = ({ sendMessage }) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    if (!text.trim()) {
+    if (!text.trim()) { 
       return
     }
     setText('')
@@ -25,16 +27,22 @@ const ChatInput = ({ sendMessage }) => {
     audio.play()
   }
 
+  const handleBtnSound = () => {
+    const audio = new Audio(clickButtonSound)
+    audio.play()
+  }
+
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form className={styles['formLook']} onSubmit={onSubmit}>
         <input
+          className={styles['inputLook']}
           onChange={onChange}
           value={text}
-          placeholder='Upiši poruku i pritisni ENTER'
+          placeholder='Write a message...'
           autoFocus={true}
         />
-        <button>
+        <button className={styles['btnLook']} onClick={handleBtnSound}>
           <FontAwesomeIcon icon={faPaperPlane} />
         </button>
       </form>
