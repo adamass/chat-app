@@ -21,7 +21,6 @@
   }
 
   .slider {
-    -webkit-transition: 0.5s;
     background-color: rgb(247, 241, 241);
     border-radius: 34px;
     bottom: 0;
@@ -35,7 +34,6 @@
   }
 
   .slider:before {
-    -webkit-transition: 0.5s;
     background-color: rgb(200, 199, 206);
     border-radius: 50%;
     bottom: 4px;
@@ -57,7 +55,5 @@
   }
   
   input:checked + .slider:before {
-    -ms-transform: translateX(25px);
-    -webkit-transform: translateX(25px);
     transform: translateX(25px);
   }

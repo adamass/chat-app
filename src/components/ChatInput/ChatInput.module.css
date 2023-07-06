@@ -8,7 +8,7 @@
 
 .inputLook {
     background-color: rgb(230, 227, 227);
-    border-radius: 50px;
+    border-radius: 30px;
     border: 1px solid #fff;
     flex-grow: 1;
     font-size: 16px;
@@ -24,6 +24,7 @@
     background-image: url('../../images/backgroundButton.jpg');
     border-radius: 50px;
     border: 1px solid gray;
+    box-shadow: 0 1px #999;
     color: #fff;
     cursor: pointer;
     font-size: 16px;
@@ -31,7 +32,6 @@
     margin-right: 10px;
     opacity: 0.8;
     padding: 16px 50px;
-    box-shadow: 0 1px #999
 }
 
 .btnLook:hover {
