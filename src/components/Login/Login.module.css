@@ -1,54 +1,55 @@
 .btnLook {
-    background-color: rgb(28, 28, 207);
-    border-radius: 50px;
-    border: 1px solid gray;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 50px;
-    padding: 16px 50px;
+  background-color: rgb(28, 28, 207);
+  border-radius: 50px;
+  border: 1px solid gray;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 50px;
+  padding: 16px 50px;
 }
 
 .btnLook:hover {
-    background-color: rgb(8, 8, 192);
+  background-color: rgb(8, 8, 192);
 }
 
 .btnLook:active {
-    background-color: rgb(28, 28, 207);
-    transform: translateY(4px);
+  background-color: rgb(28, 28, 207);
+  transform: translateY(4px);
 }
 
 .containerForm {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-  }
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
 
-  .loginForm {
-    align-items: center;
-    background-image: url(../../images/backgroundLogin.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    width: 100%;
-  }
+.loginForm {
+  align-items: center;
+  background-image: url(../../images/backgroundLogin.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
 
-  .inputLook {
-    border-radius: 30px;
-    border: 1px solid #fff;
-    font-size: 16px;
-    opacity: 0.8;
-    padding: 16px 32px;
-  }
+.inputLook {
+  border-radius: 30px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  opacity: 0.8;
+  padding: 16px 32px;
+}
 
-  .inputLook:hover  {
-    opacity: 0.7;
-  }
+.inputLook:hover  {
+  opacity: 0.7;
+}
 
-  .inputLook:focus {
-    border: 1px solid rgb(14, 8, 8);
-    outline: none !important;
-  }
+.inputLook:focus {
+  border: 1px solid rgb(14, 8, 8);
+  outline: none !important;
+}
+

@@ -4,7 +4,7 @@ import ChatInput from '../ChatInput/ChatInput'
 import ChatHeader from '../ChatHeader/ChatHeader'
 import { randomColor } from '../../utils/randomColor'
 import messageDeleteSound from '../../sounds/message-delete.wav'
-import './MyChatApp.css'
+import styles from "./MyChatApp.module.css"
 
 
 
@@ -60,7 +60,7 @@ const MyChatApp = (props) => {
   }
 
   return (
-    <div className={`chatApp ${background ? 'bgPaper' : 'bgWood'}`}>
+    <div className={[styles.chatApp, `${background ? styles.bgPaper : styles.bgWood}`].join(' ')}>
       <ChatHeader background={background} toggleBackground={toggleBackground} />
       <ChatMessages
         messages={messages}

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Login from './components/Login/Login';
-import MyChatApp from './components/MyChatApp/MyChatApp'
+import MyChatApp from './components/MyChatApp/MyChatApp';
+import "./App.css";
+
 
 const App = () => {
    const [name, setName] = useState("");
