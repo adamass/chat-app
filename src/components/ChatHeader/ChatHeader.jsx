@@ -8,22 +8,22 @@ const ChatHeader = ({ background, toggleBackground }) => {
 
   const [open, setOpen] = useState(false);
 
-  // let menuRef = useRef();
+  let menuRef = useRef();
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   let handler = (event) => {
-  //     if (!menuRef.current.contains(event.target)) {
-  //       setOpen(false);
-  //     }
-  //   }
+    let handler = (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
 
-  //   document.addEventListener("mousedown", handler);
+    document.addEventListener("mousedown", handler);
 
-  //   return() => {
-  //     document.removeEventListener("mousedown", handler);
-  //   }
-  // })
+    return() => {
+      document.removeEventListener("mousedown", handler);
+    }
+  })
 
   return (
     <div className={styles['chatHeader']}>
@@ -37,7 +37,7 @@ const ChatHeader = ({ background, toggleBackground }) => {
         <h3>Menu</h3>
         <ul>
             <DropdownItem img={settings} text={"Settings"}>
-              {/* <DropdownItemItem/> */}
+              <DropdownItemItem/>
             </DropdownItem>
             <DropdownItem img={logOut} text={"Logout"}/>
         </ul>
@@ -50,14 +50,14 @@ const ChatHeader = ({ background, toggleBackground }) => {
   )
 }
 
-// function DropdownItem(props) {
-//   return(
-//     <li className={styles['dropdownItem']}>
-//       <img src={props.img} />
-//       <a> {props.text} </a>
-//     </li>
-//   );
-// }
+function DropdownItem(props) {
+  return(
+    <li className={styles['dropdownItem']}>
+      <img src={props.img} />
+      <a> {props.text} </a>
+    </li>
+  );
+}
 
 // function DropdownItemItem(props) {
 //   return(
