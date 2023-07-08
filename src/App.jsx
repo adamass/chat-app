@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Login from './components/Login/Login';
-import MyChatApp from './components/MyChatApp/MyChatApp';
+import Chat from './components/Chat/Chat';
 import "./App.css";
 
 
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div>
       {!name && <Login onSubmit={getName}></Login>}
-      {name && <MyChatApp username={name}></MyChatApp>}
+      {name && <Chat username={name}></Chat>}
     </div>
   )
 }

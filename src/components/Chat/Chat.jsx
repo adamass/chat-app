@@ -4,7 +4,7 @@ import ChatInput from '../ChatInput/ChatInput'
 import ChatHeader from '../ChatHeader/ChatHeader'
 import { randomColor } from '../../utils/randomColor'
 import messageDeleteSound from '../../sounds/message-delete.wav'
-import styles from "./MyChatApp.module.css"
+import styles from "./Chat.module.css"
 
 
 
