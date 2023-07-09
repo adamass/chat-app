@@ -2,14 +2,15 @@
   color: #fff;
   margin: auto;
   text-align: center;
+  height: 100px;
 }
 
 .btnSwitchTheme {
   display: inline-block;
-  height: 34px;
-  margin: 20px auto 0;
+  height: 26px;
+  /* margin: 1px auto 0; */
   position: relative;
-  width: 60px;
+  width: 50px;
 }
 
 .btnSwitchTheme input {
@@ -19,7 +20,7 @@
 }
 
 .slider {
-  background-color: rgb(247, 241, 241);
+  background-color: rgb(231, 222, 222);
   border-radius: 34px;
   bottom: 0;
   cursor: pointer;
@@ -32,15 +33,15 @@
 }
 
 .slider:before {
-  background-color: rgb(200, 199, 206);
+  background-color: rgb(204, 83, 83);
   border-radius: 50%;
   bottom: 4px;
   content: '';
-  height: 26px;
+  height: 20px;
   left: 4px;
   position: absolute;
   transition: 0.5s;
-  width: 26px;
+  width: 20px;
 }
 
 input:checked + .slider {
@@ -139,7 +140,7 @@ h3 {
 
 .dropdownItem {
   display: flex;
-  margin: 10px auto;
+  margin: 1px auto;
 }
 
 .dropdownItem img {

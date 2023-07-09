@@ -36,16 +36,19 @@ const ChatHeader = ({ background, toggleBackground }) => {
       <div className={[styles.dropdownMenu, `${open ? styles.active : styles.inactive}`].join(' ')}>
         <h3>Menu</h3>
         <ul>
-            <DropdownItem img={settings} text={"Settings"}>
-              {/* <DropdownItemItem/> */}
-            </DropdownItem>
-            <DropdownItem img={logOut} text={"Logout"}/>
+            <li className={styles["dropdownItem"]}>
+              <label className={styles['btnSwitchTheme']}>
+                <input type='checkbox' checked={background} onChange={toggleBackground} />
+                <span className={styles['slider']}/>
+              </label>
+              <a>Background</a>
+            </li>
+            <li className={styles["dropdownItem"]}>
+              <img src={logOut} alt="Log out" />
+              <a>Log out</a>
+            </li>
         </ul>
       </div>
-      <label className={styles['btnSwitchTheme']}>
-        <input type='checkbox' checked={background} onChange={toggleBackground} />
-        <span className={styles['slider']}/>
-      </label>
     </div>
   )
 }
@@ -59,13 +62,5 @@ function DropdownItem(props) {
   );
 }
 
-// function DropdownItemItem(props) {
-//   return(
-//     <label className={styles['btnSwitchTheme']}>
-//     <input type='checkbox' checked={props.background} onChange={props.toggleBackground} />
-//     <span className={styles['slider']}/>
-//   </label>
-//   );
-// }
 
 export default ChatHeader
