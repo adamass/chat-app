@@ -26,10 +26,10 @@ const ChatHeader = ({ background, toggleBackground }) => {
   })
 
   return (
-    <div className={styles['chatHeader']}>
+    <div className={styles['chatHeader']} ref={menuRef}>
       <h1>Welcome! <br/> Have a nice day.</h1>
-      <div ref={menuRef}>
-        <div className={styles['menuTrigger']} onClick={() => {setOpen(!open)}}>
+      <div>
+        <div className={styles['menuTrigger']} onClick={() => {setOpen(!open)}} >
           <img src={menuIcon} alt="Menu icon" />
         </div>
       </div>
@@ -37,7 +37,7 @@ const ChatHeader = ({ background, toggleBackground }) => {
         <h3>Menu</h3>
         <ul>
             <DropdownItem img={settings} text={"Settings"}>
-              <DropdownItemItem/>
+              {/* <DropdownItemItem/> */}
             </DropdownItem>
             <DropdownItem img={logOut} text={"Logout"}/>
         </ul>

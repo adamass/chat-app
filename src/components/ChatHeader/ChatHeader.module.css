@@ -2,7 +2,6 @@
   color: #fff;
   margin: auto;
   text-align: center;
-  width: 100%;
 }
 
 .btnSwitchTheme {
@@ -65,9 +64,9 @@ a {
 }
 
 .menuTrigger img {
-  position: absolute;
-  top: 45px;
-  left: 285px;
+  position: relative;
+  top: -60px;
+  left: -450px;
   height: 40px;
   width: 40px;
   overflow: hidden;
@@ -78,9 +77,9 @@ a {
 }
 
 .dropdownMenu {
-  position: absolute;
-  top: 100px;
-  left: 285px;
+  position: relative;
+  top: -50px;
+  right: 360px;
   background-color: #f7eded;
   border-radius: 8px;
   padding: 10px 20px;
