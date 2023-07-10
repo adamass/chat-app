@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Login.module.css"
+import clickButtonSound from '../../sounds/click-button.mp3'
+
 
 
 function Login(props) {
@@ -11,6 +13,11 @@ function Login(props) {
     event.preventDefault();
     props.onSubmit(name);
    }
+
+   const handleBtnSound = () => {
+    const audio = new Audio(clickButtonSound)
+    audio.play()
+  }
 
   return (
     <div className={styles["containerForm"]}>
@@ -26,7 +33,7 @@ function Login(props) {
           maxLength="15"
           required
         />
-        <button className={styles["btnLook"]} type="submit">Login</button>
+        <button className={styles["btnLook"]} type="submit" onClick={handleBtnSound}>Login</button>
       </form>
     </div>
   );
