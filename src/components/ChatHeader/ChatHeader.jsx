@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from "./ChatHeader.module.css"
 import menuIcon from '../../images/menuIcon.png'
-import settings from '../../images/settingsIcon.png'
 import logOut from '../../images/logOutIcon.png'
 
-const ChatHeader = ({ background, toggleBackground }) => {
+const ChatHeader = ({ background, toggleBackground, handleLogOut }) => {
 
   const [open, setOpen] = useState(false);
 
@@ -44,22 +43,13 @@ const ChatHeader = ({ background, toggleBackground }) => {
               <a>Background</a>
             </li>
             <li className={styles["dropdownItem"]}>
-              <img src={logOut} alt="Log out" />
+              <img src={logOut} onClick={handleLogOut} alt="Log out" />
               <a>Log out</a>
             </li>
         </ul>
       </div>
     </div>
   )
-}
-
-function DropdownItem(props) {
-  return(
-    <li className={styles['dropdownItem']}>
-      <img src={props.img} />
-      <a> {props.text} </a>
-    </li>
-  );
 }
 
 

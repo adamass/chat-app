@@ -65,67 +65,67 @@ a {
 }
 
 .menuTrigger img {
+  border-radius: 100%;
+  box-shadow: 5px 10px 18px #020202;
+  cursor: pointer;
+  height: 40px;
+  left: -450px;
+  overflow: hidden;
   position: relative;
   top: -60px;
-  left: -450px;
-  height: 40px;
   width: 40px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 5px 10px 18px #020202;
-  border-radius: 100%;
 
 }
 
 .dropdownMenu {
-  position: relative;
-  top: -50px;
-  right: 360px;
   background-color: #f7eded;
   border-radius: 8px;
-  padding: 10px 20px;
-  width: 200px;
   color: #555;
+  padding: 10px 20px;
+  position: relative;
+  right: 360px;
+  top: -50px;
+  width: 200px;
 }
 
 .dropdownMenu::before {
+  background: #f7eded;
   content: '';
+  height: 20px;
+  left: 10px;
   position: absolute;
   top: -5px;
-  left: 10px;
-  height: 20px;
-  width: 20px;
-  background: #f7eded;
   transform: rotate(45deg);
+  width: 20px;
 }
 
 .active {
   opacity: 1;
-  visibility: visible;
   transform: translateY(0);
   transition: 500ms ease;
+  visibility: visible;
 }
 
 .inactive {
   opacity: 0;
-  visibility: hidden;
   transform: translateY(-20px);
   transition: 500ms ease;
+  visibility: hidden;
 }
 
 h3 {
-  width: 100%;
-  text-align: center;
+  color:#555;
+  font-size: 18px;
   font-size: 18px;
   font-weight: 500;
-  font-size: 18px;
-  color:#555;
   line-height: 1.2rem;
+  text-align: center;
+  width: 100%;
 }
 
 .dropdownMenu ul li {
-  padding: 10px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 10px 0;
 }
 
 .dropdownMenu ul li:hover a {
@@ -134,8 +134,8 @@ h3 {
 }
 
 .dropdownMenu ul li:hover img {
-  opacity: 1;
   cursor: pointer;
+  opacity: 1;
 }
 
 .dropdownItem {
@@ -144,14 +144,14 @@ h3 {
 }
 
 .dropdownItem img {
-  max-width: 25px;
   margin-right: 10px;
+  max-width: 25px;
   opacity: 0.5;
   transition: 500ms;
 }
 
 .dropdownItem a {
-  max-width: 100px;
   margin-left: 10px;
+  max-width: 100px;
   transition: 500ms;
 }

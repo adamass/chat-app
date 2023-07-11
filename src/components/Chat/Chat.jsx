@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import ChatMessages from '../ChatMessages/ChatMessages'
 import ChatInput from '../ChatInput/ChatInput'
 import ChatHeader from '../ChatHeader/ChatHeader'
-import { randomColor } from '../../utils/randomColor'
+import { randomColor } from '../../helpers/randomColor'
 import messageDeleteSound from '../../sounds/message-delete.wav'
 import styles from "./Chat.module.css"
 
 
 
-const MyChatApp = (props) => {
+const Chat = (props) => {
   const [messages, setMessages] = useState([])
   const [member, setMember] = useState({
     username: props.username,
@@ -39,7 +39,7 @@ const MyChatApp = (props) => {
         { id: Math.random(), member, text: data },
       ])
     })
-  }, [])
+  }, [droneRef])
 
   const toggleBackground = () => {
     setBackground((prevBackground) => !prevBackground)
@@ -59,9 +59,13 @@ const MyChatApp = (props) => {
     audio.play()
   }
 
+  const handleLogOut = () => {
+    window.location.reload(true);
+  }
+
   return (
     <div className={[styles.chatApp, `${background ? styles.bgPaper : styles.bgWood}`].join(' ')}>
-      <ChatHeader background={background} toggleBackground={toggleBackground} />
+      <ChatHeader background={background} toggleBackground={toggleBackground} handleLogOut={handleLogOut}/>
       <ChatMessages
         messages={messages}
         currentMember={member}
@@ -72,4 +76,4 @@ const MyChatApp = (props) => {
   )
 }
 
-export default MyChatApp;
+export default Chat;

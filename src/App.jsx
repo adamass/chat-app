@@ -5,13 +5,14 @@ import "./App.css";
 
 
 const App = () => {
-   const [name, setName] = useState("");
-  
+  const [name, setName] = useState("");
+
   const getName = (data) => {
     setName(data);
   }
+
   
- 
+
   return (
     <div>
       {!name && <Login onSubmit={getName}></Login>}
